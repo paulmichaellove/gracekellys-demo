@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Grace Kelly&rsquo;s Irish Lounge, Tynemouth | Live music, sport and bottomless brunch</title>
-<meta name="description" content="Irish bar at 77 Front Street, Tynemouth. Live music Friday to Sunday, Sky Sports and TNT every day, bottomless brunch at &pound;35 a head. Book a table or call 0191 429 6576.">
+<meta name="description" content="Irish bar at 77 Front Street, Tynemouth. Live music Friday to Sunday, Sky Sports and TNT every day, bottomless brunch at &pound;35 a head. Call 0191 429 6576 or open the booking sheet.">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#0d2119">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/crown-64.png">
@@ -13,7 +13,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Grace Kelly&rsquo;s Irish Lounge">
 <meta property="og:title" content="Grace Kelly&rsquo;s Irish Lounge, Tynemouth">
-<meta property="og:description" content="77 Front Street, Tynemouth. Live music Friday to Sunday, sport every day, bottomless brunch at &pound;35. Book a table in a tap.">
+<meta property="og:description" content="77 Front Street, Tynemouth. Live music Friday to Sunday, sport every day, bottomless brunch at &pound;35. Call or book in a tap.">
 <meta property="og:url" content="https://gracekellys.paulmichaellove.com/">
 <meta property="og:image" content="https://gracekellys.paulmichaellove.com/assets/share-card-1200x630.jpg">
 <meta property="og:image:width" content="1200">
@@ -478,7 +478,12 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
 .hint.warn { color: #7a4a00; font-weight: 600; }
 .summary { background: #fff; border-radius: 12px; padding: 14px 16px; border: 1px dashed rgba(18, 18, 18, .3); font-size: .95rem; }
 .summary b { display: block; font-size: .8rem; font-weight: 600; color: var(--taupe); margin-bottom: 4px; }
-.sheet__go { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.sheet__go { display: grid; grid-template-columns: 1fr; gap: 10px; }
+/* note to the owner, not the customer */
+.confirm { font-size: .72rem; font-style: italic; letter-spacing: .02em; font-weight: 400; color: var(--gold-hi); opacity: .85; margin: 8px 0 0; line-height: 1.3; }
+.confirm::before { content: ""; display: inline-block; width: 16px; height: 1px; background: currentColor; vertical-align: middle; margin-right: 8px; }
+.confirm--on-gold { color: var(--ink-2); opacity: .7; }
+.facts .confirm { display: block; color: var(--gold-lo); opacity: 1; margin-top: 2px; }
 .sheet__go .btn { width: 100%; padding: 0 .6em; }
 .copy { justify-self: center; min-height: 44px; border: 0; background: transparent; font-weight: 600; font-size: .9rem; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; color: var(--green-900); }
 .toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: var(--z-toast); background: var(--ink); color: var(--cream); padding: 10px 16px; border-radius: 999px; font-size: .9rem; opacity: 0; pointer-events: none; transition: opacity .2s; }
@@ -629,6 +634,7 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
         <div><dt>Thursday and Friday</dt><dd>4pm to 7pm</dd></div>
         <div><dt>Saturday and Sunday</dt><dd>12pm to 4pm</dd></div>
       </dl>
+      <p class="confirm confirm--on-gold">to confirm with you: the bottomless days and times</p>
       <div class="bl-cta">
         <button class="btn btn--ink" type="button" data-book="bottomless"><svg class="ico" aria-hidden="true"><use href="#i-glass"/></svg>Book bottomless</button>
         <a class="textlink" href="tel:+441914296576">or ring 0191 429 6576</a>
@@ -684,7 +690,7 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
       <img src="assets/gig-720.webp" srcset="assets/gig-720.webp 720w, assets/gig-1080.webp 1080w" sizes="(min-width: 1000px) 46vw, 100vw" width="720" height="900" loading="lazy" alt="A guitarist singing on the stage under the Good Craic screen and the Grace Kelly&rsquo;s crown sign">
       <figcaption><b>Live music, every weekend</b><span>Local artists and acoustic sessions, the best Irish favourites to start your weekend right.</span></figcaption>
     </figure>
-    <article class="ticket" id="soul" aria-labelledby="soul-h">
+    <article class="ticket" id="soul" aria-labelledby="soul-h" data-date="2026-11-08">
       <div class="ticket__stub" aria-hidden="true"><span class="wd">Sun</span><span class="dn">8</span><span class="mo">Nov</span></div>
       <div class="ticket__body">
         <h3 id="soul-h">Soul Afternoon</h3>
@@ -727,7 +733,7 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
         <h3>Celebrate with us</h3>
       </div>
       <p class="occasions">Birthdays and milestones, engagement parties, work socials, group gatherings</p>
-      <p>Tell us the date and how many are coming, by phone or text.</p>
+      <p>Tell us the date and how many are coming, by phone.</p>
       <button class="btn btn--gold" type="button" data-book="party">Plan a party</button>
     </div>
   </div>
@@ -759,7 +765,7 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
         <button type="button" aria-label="Review 2"></button>
         <button type="button" aria-label="Review 3"></button>
       </div>
-      <a class="rv-all" href="https://www.google.com/maps/search/Grace+Kelly%27s+Tynemouth" rel="noopener" target="_blank">Read all 51 on Google</a>
+      <a class="rv-all" href="https://www.google.com/maps/search/Grace+Kelly%27s+Tynemouth" rel="noopener" target="_blank">Read all on Google</a>
     </div>
   </div>
 </section>
@@ -772,8 +778,8 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
       <div><dt>Sport</dt><dd>Sky Sports and TNT on the screens every day.</dd></div>
       <div><dt>Live music</dt><dd>Friday, Saturday and Sunday.</dd></div>
       <div><dt>Bottomless brunch</dt><dd>&pound;35 a head for 90 minutes of bottomless drinks, Thursday to Sunday.</dd></div>
-      <div><dt>Groups and parties</dt><dd>Birthdays, engagements and work socials. Call or text to plan one.</dd></div>
-      <div><dt>Booking</dt><dd><a href="tel:+441914296576">Call 0191 429 6576</a></dd></div>
+      <div><dt>Groups and parties</dt><dd>Birthdays, engagements and work socials. Call to plan one.</dd></div>
+      <div><dt>Booking</dt><dd><a href="tel:+441914296576">Call 0191 429 6576</a> <span class="confirm">to confirm with you: phone number</span></dd></div>
     </dl>
   </div>
 </section>
@@ -801,6 +807,7 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
         <tr data-day="0"><th scope="row">Sunday</th><td>12pm to midnight</td></tr>
       </tbody>
     </table>
+    <p class="confirm confirm--hours">to confirm with you: the opening hours</p>
   </div>
 </section>
 
@@ -855,7 +862,7 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
     <div class="summary" aria-live="polite"><b>Your message</b><span id="summary">Hi Grace Kelly&rsquo;s, I&rsquo;d like to book a table for 2.</span></div>
     <div class="sheet__go">
       <a class="btn btn--green" id="go-call" href="tel:+441914296576"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
-      <a class="btn btn--gold" id="go-sms" href="sms:+441914296576"><svg class="ico" aria-hidden="true"><use href="#i-msg"/></svg>Message</a>
+      <!-- Message returns when the venue gives a mobile or WhatsApp number. -->
     </div>
     <button class="copy" type="button" id="go-copy">Copy the message</button>
   </form>
@@ -866,6 +873,18 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
 (function () {
   "use strict";
   var PHONE = "+441914296576";
+  /* Events by date: hide any dated item once its day has passed (UK date). With scripts off it stays visible. */
+  (function () {
+    var today;
+    try {
+      var p = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(new Date()), o = {};
+      p.forEach(function (x) { o[x.type] = x.value; });
+      today = o.year + "-" + o.month + "-" + o.day;
+    } catch (e) { today = new Date().toISOString().slice(0, 10); }
+    Array.prototype.forEach.call(document.querySelectorAll("[data-date]"), function (el) {
+      if (el.getAttribute("data-date") < today) el.style.display = "none";
+    });
+  })();
   /* Google's listed hours. Day 0 is Sunday. Close past 24 means after midnight. */
   var HOURS = { 0: [12, 24], 1: [11, 24], 2: [11, 24], 3: [11, 24], 4: [11, 24], 5: [11, 26], 6: [11, 26] };
   var DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -949,7 +968,6 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
   var nameIn = document.getElementById("name");
   var hint = document.getElementById("kind-hint");
   var summary = document.getElementById("summary");
-  var sms = document.getElementById("go-sms");
   var size = 2;
   dateIn.min = now.iso;
 
@@ -977,7 +995,6 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
     msg += ".";
     if (nameIn.value.trim()) msg += " My name is " + nameIn.value.trim() + ".";
     summary.textContent = msg;
-    sms.href = "sms:" + PHONE + "?&body=" + encodeURIComponent(msg);
 
     var wd = weekday(dateIn.value);
     hint.className = "hint";
@@ -1041,7 +1058,7 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
   function say(t) { toast.textContent = t; toast.classList.add("is-on"); setTimeout(function () { toast.classList.remove("is-on"); }, 2200); }
   document.getElementById("go-copy").addEventListener("click", function () {
     var msg = build();
-    var done = function () { say("Copied. Paste it into a text or a DM."); };
+    var done = function () { say("Copied. Paste it wherever you like."); };
     try {
       if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(msg).then(done, function () { fallbackCopy(msg); done(); }); }
       else { fallbackCopy(msg); done(); }
