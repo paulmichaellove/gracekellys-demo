@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The sites are new and they’re leaking</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0A0A0A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The sites are new and they’re leaking">
+<meta property="og:image" content="https://gracekellys.paulmichaellove.com/audit/assets/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/barlow-condensed-700.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="assets/montserrat-var.woff" as="font" type="font/woff" crossorigin>
+<script>document.documentElement.className="js"</script>
+<style>
+/* Knox Venues audit, phone first, designed at 390. House tokens: ink #0A0A0A, white #F5F5F2, orange #F37F02.
+   Orange marks a fault and the one number, nothing else. Fonts are local files (assets/). */
+@font-face{font-family:"Barlow Condensed";src:url(assets/barlow-condensed-700.woff) format("woff");font-weight:700;font-display:swap}
+@font-face{font-family:"Montserrat";src:url(assets/montserrat-var.woff) format("woff");font-weight:100 900;font-display:swap}
+:root{--ink:#0A0A0A;--white:#F5F5F2;--orange:#F37F02;--body:#CFCFCA;--soft:#A3A39E;--line:#2C2C2A;--bezel:#262624;--ease:cubic-bezier(.16,1,.3,1)}
+*{box-sizing:border-box}
+html{background:var(--ink);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ink);color:var(--white);font:500 17px/1.6 "Montserrat",system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;font-feature-settings:"lnum" 1}
+.col{max-width:480px;margin:0 auto;overflow-x:clip;border-inline:1px solid #151513;background:var(--ink)}
+.d{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-weight:700;text-transform:uppercase;line-height:.95;letter-spacing:.005em;margin:0;text-wrap:balance}
+h1.d{font-size:clamp(44px,13.4vw,60px)}
+h2.d{font-size:clamp(38px,10.6vw,48px);margin-bottom:26px}
+.p{margin:0 0 1em;color:var(--body);text-wrap:pretty;max-width:34em}
+.lead{margin:0 0 .9em;font-weight:600;font-size:20px;line-height:1.45;color:var(--white);text-wrap:pretty}
+section,header{padding-inline:20px}
+.pn{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;font-style:normal}
+
+/* hero */
+.hero{padding-top:max(34px,env(safe-area-inset-top));padding-bottom:64px;min-height:100svh;background:radial-gradient(120% 60% at 50% 38%,#1b1b19 0%,var(--ink) 70%)}
+.hero .lead{margin-top:6px;font-size:22px}
+.duo{display:flex;gap:14px;margin:26px 0 18px;align-items:flex-start}
+.ph{margin:0;flex:1;min-width:0}
+.ph .scr{position:relative;border:7px solid var(--bezel);border-radius:30px;overflow:hidden;aspect-ratio:390/844;background:#000;box-shadow:0 34px 60px -28px rgba(0,0,0,.9),0 0 0 1px #3a3a37}
+.ph .scr img{display:block;width:100%;height:100%;object-fit:cover}
+.ph.old .scr img{filter:brightness(.38) saturate(.7)}
+.ph.new .scr{box-shadow:0 34px 70px -24px rgba(0,0,0,.9),0 0 0 1px #4a4a46,0 0 46px rgba(245,245,242,.07)}
+iframe.live{position:absolute;left:0;top:0;width:390px;height:844px;border:0;transform-origin:0 0;transform:scale(.405);opacity:0;transition:opacity .6s ease;background:#0d2119}
+iframe.live.ready{opacity:1}
+.ph figcaption{margin-top:12px;font-size:13px;line-height:1.3;color:var(--soft);text-align:center}
+.ph.new figcaption::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#58d68d;margin-right:8px;vertical-align:1px;animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+@media (prefers-reduced-motion:no-preference){.duo .ph{animation:rise .9s var(--ease) both}.duo .ph.new{animation-delay:.12s}@keyframes rise{from{transform:translateY(22px)}}}
+
+/* intro */
+.intro{padding-top:56px;padding-bottom:28px}
+
+/* findings: one per screen */
+.finding{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:44px 0 52px;padding-inline:0}
+.fnum{font:700 76px/.8 "Barlow Condensed",sans-serif;padding:0 20px;margin-bottom:22px;color:var(--white)}
+.track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 10px;scroll-padding-inline:20px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 min(300px,80vw);scroll-snap-align:start}
+.track.one{justify-content:center}
+.track.one .slide{scroll-snap-align:center}
+.sent{margin:0;padding:24px 20px 0;color:var(--body);max-width:32em;text-wrap:pretty}
+.qt{color:var(--white);font-weight:700}
+.needs{background:var(--orange);color:var(--ink);font-weight:700;padding:0 .15em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.dev{margin:0;background:#000}
+.dev.phone{border:8px solid var(--bezel);border-radius:34px;overflow:hidden;box-shadow:0 36px 60px -30px rgba(0,0,0,.9),0 0 0 1px #3a3a37}
+.dev.browser{border:2px solid var(--bezel);border-radius:14px;overflow:hidden;background:#1c1c1a;box-shadow:0 30px 50px -28px rgba(0,0,0,.9),0 0 0 1px #3a3a37}
+.bar{height:22px;display:flex;gap:6px;align-items:center;padding:0 10px;background:#2a2a28}
+.bar i{width:7px;height:7px;border-radius:50%;background:#8a8a85}
+.scr{position:relative;display:block}
+.dev .scr img{display:block;width:100%;height:100%;object-fit:cover}
+.ov{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.ring{fill:none;stroke:var(--orange);stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0;filter:drop-shadow(0 0 5px rgba(243,127,2,.65))}
+.dim{fill:#000;opacity:.5}
+.js .ring{stroke-dashoffset:1;transition:stroke-dashoffset 1.15s var(--ease) .2s}
+.js .dim{opacity:0;transition:opacity .9s ease .1s}
+.js .in .ring{stroke-dashoffset:0}
+.js .in .dim{opacity:.5}
+
+/* two quiet lines */
+.quiet{min-height:64svh;display:flex;align-items:center;border-top:1px solid var(--line)}
+.quiet p{margin:0;font-size:22px;line-height:1.5;font-weight:500;color:#C4C4BF;text-wrap:pretty}
+
+/* the money */
+.money{padding-top:88px;padding-bottom:72px;border-top:1px solid var(--line)}
+.prices{display:flex;gap:10px;margin:8px 0 34px}
+.prices p{flex:1;margin:0;padding-top:12px;border-top:2px solid var(--white)}
+.prices .who{display:block;font-size:13px;line-height:1.3;color:var(--soft);margin-bottom:6px}
+.prices b{display:block;font:700 clamp(40px,12vw,52px)/.9 "Barlow Condensed",sans-serif;color:var(--white)}
+.prices .per{display:block;font-size:12px;color:var(--soft);margin-top:4px}
+.about{margin:34px 0 28px;font-weight:600;font-size:20px;line-height:1.2;color:var(--white);display:flex;flex-direction:column}
+.bignum{display:block;font:700 clamp(96px,31vw,138px)/.88 "Barlow Condensed",sans-serif;color:var(--orange);letter-spacing:.005em;margin:6px 0 8px;font-variant-numeric:tabular-nums}
+
+/* what I'd do about each one */
+.about-each{padding-top:80px;padding-bottom:72px;border-top:1px solid var(--line)}
+.rows{list-style:none;margin:0 0 36px;padding:0}
+.rows li{border-top:1px solid var(--line);padding:22px 0 24px}
+.rows li:last-child{border-bottom:1px solid var(--line)}
+.fault{margin:0 0 8px;font:700 31px/1 "Barlow Condensed",sans-serif;text-transform:uppercase;color:var(--orange);text-wrap:balance}
+.fix{margin:0;color:var(--body)}
+
+/* done over, the slider */
+.doneover{padding-top:80px;padding-bottom:64px;border-top:1px solid var(--line)}
+.ba{position:relative;width:min(100%,330px);margin:6px auto 36px;border:6px solid var(--bezel);border-radius:30px;overflow:clip;touch-action:pan-y;user-select:none;-webkit-user-select:none;background:var(--ink);--x:50%}
+.stage{position:relative;background:#050505;aspect-ratio:390/4220;overflow:hidden}
+.layer img{display:block;width:100%;height:auto}
+.layer{position:absolute;top:0;left:0;width:100%}
+.layer.old{clip-path:inset(0 calc(100% - var(--x)) 0 0)}
+.hw{position:sticky;top:0;height:100svh;margin-bottom:-100svh;pointer-events:none;z-index:3}
+.hw .line{position:absolute;top:0;bottom:0;left:var(--x);width:3px;margin-left:-1.5px;background:var(--white);box-shadow:0 0 12px rgba(0,0,0,.6)}
+.knob{position:absolute;top:50%;left:50%;width:48px;height:48px;margin:-24px 0 0 -24px;border-radius:50%;background:var(--white);color:var(--ink);display:grid;place-items:center;box-shadow:0 6px 22px rgba(0,0,0,.55)}
+.tag{position:absolute;top:12px;font:700 14px/1 "Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.07em;padding:6px 10px;border-radius:99px;background:rgba(10,10,10,.82);color:var(--white)}
+.tag.l{left:10px}.tag.r{right:10px}
+a.demo{color:var(--white);font-weight:700;text-decoration:none;border-bottom:2px solid var(--white);word-break:break-all}
+
+/* what's changed: a swipe of nine */
+.changed{padding-top:80px;padding-bottom:64px;border-top:1px solid var(--line)}
+.cards{list-style:none;margin:26px -20px 0;padding:0 20px 8px;display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:20px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.cards::-webkit-scrollbar{display:none}
+.card{flex:0 0 min(300px,78vw);scroll-snap-align:start;border-radius:20px;overflow:hidden;background:var(--white)}
+.card img{display:block;width:100%;height:auto}
+
+/* percy park */
+.percy{padding-top:80px;padding-bottom:72px;border-top:1px solid var(--line)}
+.shot{display:block;width:100%;height:auto;border-radius:16px;margin:10px 0 32px}
+
+/* the price block: paper on ink, the one place the page goes light */
+.paper{background:var(--white);color:var(--ink);padding-top:80px;padding-bottom:88px}
+.paper h2.d{color:var(--ink)}
+.paper .p{color:#2B2B28}
+.paper strong{color:var(--ink)}
+.paper .lead{color:var(--ink)}
+.paper .from{margin-top:76px;padding-top:44px;border-top:3px solid var(--ink)}
+.fig{margin:0 0 14px;font-weight:600;font-size:20px;line-height:1.3;color:var(--ink)}
+.amt{display:block;margin:2px 0 4px;font:700 clamp(84px,26vw,108px)/.9 "Barlow Condensed",sans-serif;letter-spacing:.005em}
+.list{list-style:none;margin:0 0 28px;padding:0}
+.list li{border-top:1px solid #D2D2CC;padding:14px 0;color:#2B2B28}
+.list li:last-child{border-bottom:1px solid #D2D2CC}
+.risk{margin:34px 0 22px;padding-top:22px;border-top:3px solid var(--ink);font-weight:700;font-size:21px;line-height:1.4}
+
+/* the ask */
+.ask{padding-top:88px;padding-bottom:120px}
+.ask .lead{font-size:22px}
+.orule{border:0;height:5px;background:var(--orange);margin:44px 0 30px;width:100%}
+.last{margin:0;font:700 clamp(34px,10vw,44px)/1 "Barlow Condensed",sans-serif;text-transform:uppercase;color:var(--white);text-wrap:balance}
+
+@media (prefers-reduced-motion:reduce){
+  .js .ring,.js .dim,iframe.live{transition:none}
+  .js .ring{stroke-dashoffset:0}.js .dim{opacity:.5}
+  iframe.live{opacity:1}
+  .ph.new figcaption::before{animation:none}
+}
+
+</style>
+</head>
+<body>
+<main class="col">
+
+<header class="hero">
+  <h1 class="d">The sites are new and they’re leaking</h1>
+  <div class="duo">
+    <figure class="ph old"><div class="scr"><img src="assets/hero-old.jpg" width="780" height="1688" alt="Grace Kelly’s Tynemouth first screen on a phone, as it is now"></div></figure>
+    <figure class="ph new"><div class="scr"><img class="poster" src="assets/hero-new.jpg" width="780" height="1688" alt="The demo’s first screen on a phone"><iframe class="live" src="https://gracekellys.paulmichaellove.com/" title="Grace Kelly’s Tynemouth, the live demo" width="390" height="844" loading="lazy" referrerpolicy="no-referrer"></iframe></div><figcaption>that’s live, go on</figcaption></figure>
+  </div>
+  <p class="lead">They look the part.</p>
+  <p class="p">The gaps show to a stranger with a phone and never from behind the bar.</p>
+  <p class="p">What he sees is marked below, with what I’d do about each one. I do all of it.</p>
+</header>
+
+<section class="intro">
+  <h2 class="d">What I found</h2>
+  <p class="p">I went through your places at phone width, the way a stranger with a phone meets them. Eight things came up.</p>
+</section>
+
+<section class="finding" aria-label="Finding 1"><span class="fnum" aria-hidden="true">1</span><div class="track"><div class="slide"><figure class="dev phone"><div class="scr" style="aspect-ratio:390/460"><img src="assets/f1a.jpg" width="780" height="920" alt="The Cove’s booking page on a phone: undefined people, above a red box, ringed" loading="lazy" decoding="async"><svg class="ov" viewBox="0 0 390 460" preserveAspectRatio="none" aria-hidden="true"><path class="dim" fill-rule="evenodd" d="M0 0H390V460H0zM8 38h374v62h-374zM4 118h382v98h-382z"/><rect class="ring" x="8" y="38" width="374" height="62" rx="12.7" pathLength="1" style="stroke-width:5.09px"/><rect class="ring" x="4" y="118" width="382" height="98" rx="12.7" pathLength="1" style="stroke-width:5.09px"/></svg></div></figure></div><div class="slide"><figure class="dev phone"><div class="scr" style="aspect-ratio:390/460"><img src="assets/f1b.jpg" width="780" height="920" alt="3Sixty’s booking page on a phone, the same, ringed" loading="lazy" decoding="async"><svg class="ov" viewBox="0 0 390 460" preserveAspectRatio="none" aria-hidden="true"><path class="dim" fill-rule="evenodd" d="M0 0H390V460H0zM8 38h374v62h-374zM4 118h382v98h-382z"/><rect class="ring" x="8" y="38" width="374" height="62" rx="12.7" pathLength="1" style="stroke-width:5.09px"/><rect class="ring" x="4" y="118" width="382" height="98" rx="12.7" pathLength="1" style="stroke-width:5.09px"/></svg></div></figure></div></div><p class="sent">Tap Book a Table at the Cove and the booking page opens on <span class="qt">“You are making a À La Carte booking enquiry for undefined people at on undefined”</span>, above a red box saying three things are missing before anyone’s typed a thing. 3Sixty’s does the same.</p></section><section class="finding" aria-label="Finding 2"><span class="fnum" aria-hidden="true">2</span><div class="track one"><div class="slide"><figure class="dev phone"><div class="scr" style="aspect-ratio:390/700"><img src="assets/f2.jpg" width="780" height="1400" alt="The Cove’s Reservations page on a phone, the enquiry box that never loads, ringed" loading="lazy" decoding="async"><svg class="ov" viewBox="0 0 390 700" preserveAspectRatio="none" aria-hidden="true"><path class="dim" fill-rule="evenodd" d="M0 0H390V700H0zM45 54h300v608h-300z"/><rect class="ring" x="45" y="54" width="300" height="608" rx="12.7" pathLength="1" style="stroke-width:5.09px"/></svg></div></figure></div></div><p class="sent">The Cove’s Reservations page has an enquiry box that shows a broken page icon, and nothing loads in it.</p></section><section class="finding" aria-label="Finding 3"><span class="fnum" aria-hidden="true">3</span><div class="track"><div class="slide"><figure class="dev browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><div class="scr" style="aspect-ratio:330/170"><img src="assets/f3a.jpg" width="330" height="170" alt="Where the Cove’s View Drinks Menu button goes: Page not found, ringed" loading="lazy" decoding="async"><svg class="ov" viewBox="0 0 330 170" preserveAspectRatio="none" aria-hidden="true"><path class="dim" fill-rule="evenodd" d="M0 0H330V170H0zM74 56h182v76h-182z"/><rect class="ring" x="74" y="56" width="182" height="76" rx="10.0" pathLength="1" style="stroke-width:4.01px"/></svg></div></figure></div><div class="slide"><figure class="dev phone"><div class="scr" style="aspect-ratio:390/360"><img src="assets/f3b.jpg" width="780" height="720" alt="The Cove’s Reservations page on 3 November, the Halloween button ringed" loading="lazy" decoding="async"><svg class="ov" viewBox="0 0 390 360" preserveAspectRatio="none" aria-hidden="true"><path class="dim" fill-rule="evenodd" d="M0 0H390V360H0zM10 205h370v84h-370z"/><rect class="ring" x="10" y="205" width="370" height="84" rx="12.7" pathLength="1" style="stroke-width:5.09px"/></svg></div></figure></div></div><p class="sent">The Cove’s home page has no opening hours on it, and its View Drinks Menu button opens a <span class="qt">“Page not found”</span> page, with a template placeholder still sitting in the web address. On 3 November the Reservations page still had a Book button for the Halloween event on Tuesday 27 October.</p></section><section class="finding" aria-label="Finding 4"><span class="fnum" aria-hidden="true">4</span><div class="track"><div class="slide"><figure class="dev phone"><div class="scr" style="aspect-ratio:390/380"><img src="assets/f4a.jpg" width="780" height="760" alt="Grace Kelly’s Tynemouth page on a phone, Seaham ringed" loading="lazy" decoding="async"><svg class="ov" viewBox="0 0 390 380" preserveAspectRatio="none" aria-hidden="true"><path class="dim" fill-rule="evenodd" d="M0 0H390V380H0zM275 140h89v30h-89z"/><rect class="ring" x="275" y="140" width="89" height="30" rx="12.7" pathLength="1" style="stroke-width:5.09px"/></svg></div></figure></div><div class="slide"><figure class="dev phone"><div class="scr" style="aspect-ratio:390/380"><img src="assets/f4b.jpg" width="780" height="760" alt="Grace Kelly’s Tynemouth Find Us block with no phone number, ringed" loading="lazy" decoding="async"><svg class="ov" viewBox="0 0 390 380" preserveAspectRatio="none" aria-hidden="true"><path class="dim" fill-rule="evenodd" d="M0 0H390V380H0zM6 146h380v162h-380z"/><rect class="ring" x="6" y="146" width="380" height="162" rx="12.7" pathLength="1" style="stroke-width:5.09px"/></svg></div></figure></div></div><p class="sent">Grace Kelly’s Tynemouth asks you to <span class="qt">“take a look around Seaham’s favourite gathering place”</span>, and its one booking link goes to Seaham and is hidden from view. The page has no phone number, and no price in words, only in a picture, and its View Drinks Menu button does nothing when tapped.</p></section><section class="finding" aria-label="Finding 5"><span class="fnum" aria-hidden="true">5</span><div class="track"><div class="slide"><figure class="dev browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><div class="scr" style="aspect-ratio:400/330"><img src="assets/f5a.jpg" width="400" height="330" alt="Grace Kelly’s opening hours on Google, ringed" loading="lazy" decoding="async"><svg class="ov" viewBox="0 0 400 330" preserveAspectRatio="none" aria-hidden="true"><path class="dim" fill-rule="evenodd" d="M0 0H400V330H0zM2 92h238v166h-238z"/><rect class="ring" x="2" y="92" width="238" height="166" rx="12.2" pathLength="1" style="stroke-width:4.86px"/></svg></div></figure></div><div class="slide"><figure class="dev phone"><div class="scr" style="aspect-ratio:390/270"><img src="assets/f5b.jpg" width="780" height="540" alt="Grace Kelly’s opening hours on its own site, ringed" loading="lazy" decoding="async"><svg class="ov" viewBox="0 0 390 270" preserveAspectRatio="none" aria-hidden="true"><path class="dim" fill-rule="evenodd" d="M0 0H390V270H0zM6 126h220v74h-220z"/><rect class="ring" x="6" y="126" width="220" height="74" rx="12.7" pathLength="1" style="stroke-width:5.09px"/></svg></div></figure></div></div><p class="sent">Grace Kelly’s Tynemouth has four different sets of opening hours across Google, its site, Instagram and Fanzo, and none of its newest 30 Google reviews has a reply. In the newest 20 at the Cove, the 1 star, the 2 star and two of the three 3 stars have no reply, and 3Sixty’s four 3 stars have none.</p></section><section class="finding" aria-label="Finding 6"><span class="fnum" aria-hidden="true">6</span><div class="track one"><div class="slide"><figure class="dev browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><div class="scr" style="aspect-ratio:863/478"><img src="assets/f6.jpg" width="863" height="478" alt="Where the Menu link on 3Sixty’s Google listing lands: Page not found, ringed" loading="lazy" decoding="async"><svg class="ov" viewBox="0 0 863 478" preserveAspectRatio="none" aria-hidden="true"><path class="dim" fill-rule="evenodd" d="M0 0H863V478H0zM256 100h352v146h-352z"/><rect class="ring" x="256" y="100" width="352" height="146" rx="26.2" pathLength="1" style="stroke-width:10.5px"/></svg></div></figure></div></div><p class="sent">3Sixty’s terms page prints <span class="needs">“{{NEEDS_INPUT: cancellation and amendment policy}}”</span> for anyone to read, and the Menu link on its Google listing lands on <span class="qt">“Page not found”</span>.</p></section><section class="finding" aria-label="Finding 7"><span class="fnum" aria-hidden="true">7</span><div class="track one"><div class="slide"><figure class="dev phone"><div class="scr" style="aspect-ratio:390/560"><img src="assets/f7.jpg" width="780" height="1120" alt="The Cove’s first screen on a phone, as captured" loading="lazy" decoding="async"></div></figure></div></div><p class="sent">Davanti Classico’s new site is built the same way as the Cove’s, and on both the picture a shared link carries is left blank.</p></section><section class="finding" aria-label="Finding 8"><span class="fnum" aria-hidden="true">8</span><div class="track"><div class="slide"><figure class="dev browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><div class="scr" style="aspect-ratio:704/647"><img src="assets/f8a.jpg" width="704" height="647" alt="Google results for Hidden Tiger Tynemouth: the expired site first, Facebook saying Open Now, each ringed" loading="lazy" decoding="async"><svg class="ov" viewBox="0 0 704 647" preserveAspectRatio="none" aria-hidden="true"><path class="dim" fill-rule="evenodd" d="M0 0H704V647H0zM4 10h276v124h-276zM319 571h97v36h-97z"/><rect class="ring" x="4" y="10" width="276" height="124" rx="21.4" pathLength="1" style="stroke-width:8.56px"/><rect class="ring" x="319" y="571" width="97" height="36" rx="21.4" pathLength="1" style="stroke-width:8.56px"/></svg></div></figure></div><div class="slide"><figure class="dev browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><div class="scr" style="aspect-ratio:394/270"><img src="assets/f8b.jpg" width="394" height="270" alt="Hidden Tiger’s Google panel: Permanently closed, and the Website button, ringed" loading="lazy" decoding="async"><svg class="ov" viewBox="0 0 394 270" preserveAspectRatio="none" aria-hidden="true"><path class="dim" fill-rule="evenodd" d="M0 0H394V270H0zM4 88h384v44h-384zM4 212h110v48h-110z"/><rect class="ring" x="4" y="88" width="384" height="44" rx="12.0" pathLength="1" style="stroke-width:4.79px"/><rect class="ring" x="4" y="212" width="110" height="48" rx="12.0" pathLength="1" style="stroke-width:4.79px"/></svg></div></figure></div><div class="slide"><figure class="dev browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><div class="scr" style="aspect-ratio:1080/320"><img src="assets/f8c.jpg" width="1080" height="320" alt="Where the Website button goes: Website Expired, ringed" loading="lazy" decoding="async"><svg class="ov" viewBox="0 0 1080 320" preserveAspectRatio="none" aria-hidden="true"><path class="dim" fill-rule="evenodd" d="M0 0H1080V320H0zM440 76h198v48h-198z"/><rect class="ring" x="440" y="76" width="198" height="48" rx="32.8" pathLength="1" style="stroke-width:13.14px"/></svg></div></figure></div></div><p class="sent">Google has Hidden Tiger and Buddha Lounge, both at 76 Front Street, as permanently closed. Hidden Tiger’s first search result is a <span class="qt">“Website Expired”</span> page with a Facebook result saying <span class="qt">“Open Now”</span> below it, and Google’s own AI answer still tells people to book Buddha Lounge through its Instagram.</p></section>
+
+<section class="quiet"><p>Over 3,000 Google reviews between the Cove and 3Sixty, and the booking page calls them undefined people.</p></section>
+<section class="quiet"><p>I can’t see from outside how many give up at any of these, and I won’t guess. I can show you what one of them is worth.</p></section>
+
+<section class="money">
+  <h2 class="d">Where the money is</h2>
+  <p class="p">Take one bottomless table of two, lost once a week, four weeks a month, at each venue’s own price:</p>
+  <div class="prices">
+    <p><span class="who">the Cove</span> <b>£39.95</b> <span class="per">a head<i class="pn">,</i></span></p>
+    <p><span class="who">Grace Kelly’s</span> <b>£35</b><i class="pn">,</i></p>
+    <p><span class="who">3Sixty</span> <b>£54.95</b><i class="pn">.</i></p>
+  </div>
+  <p class="lead">Over four weeks that’s £320 at the Cove, £280 at Grace Kelly’s and £440 at 3Sixty.</p>
+  <p class="about">About <span class="bignum" id="count" data-to="1040">£1,040</span> a month.</p>
+  <p class="p">Arithmetic, not a measurement. It says what one lost bottomless table a week is worth, not how many are lost.</p>
+  <p class="p">The Cove’s Festive Fayre is £34.95 a head, runs 23 November to 24 December and has to be booked ahead, with a £5 a head deposit, through DesignMyNight, the same booking system whose Book a Table link opens on undefined people.</p>
+  <p class="p">3Sixty’s festive set menu starts at £42.95 a head with a £20 deposit, and 3Sixty isn’t on the first page of Google for christmas party newcastle.</p>
+</section>
+
+<section class="about-each">
+  <h2 class="d">What I’d do about each one</h2>
+  <ol class="rows"><li><p class="fault">Undefined people<i class="pn">.</i></p><p class="fix">The Book buttons open on a clean booking form, with no red box.</p></li><li><p class="fault">A broken box<i class="pn">.</i></p><p class="fix">Connected to a real form, or taken off the page.</p></li><li><p class="fault">No hours, a dead drinks menu, Halloween in November<i class="pn">.</i></p><p class="fix">Hours on the home page, a drinks menu that opens, and an event comes off the day after it’s been.</p></li><li><p class="fault">Seaham on a Tynemouth page<i class="pn">.</i></p><p class="fix">Tynemouth’s own words, a phone number, a drinks menu, and buttons that go somewhere.</p></li><li><p class="fault">Four sets of hours and reviews with no reply<i class="pn">.</i></p><p class="fix">One true set of hours, the same on Google, the site, Instagram and Fanzo. Every review answered, the bad ones first. A booking link on each Google listing, the way 3Sixty already has one.</p></li><li><p class="fault">Template text and a dead link<i class="pn">.</i></p><p class="fix">The terms get real wording, which you read before it goes up. Google’s Menu link goes to a page that’s there, and the seventeen 3Sixty pages that share one title get one each.</p></li><li><p class="fault">Blank link pictures<i class="pn">.</i></p><p class="fix">A picture on every shared link.</p></li><li><p class="fault">Closed venues still open online<i class="pn">.</i></p><p class="fix">If they’re yours and they’re closed, the expired page and the Open Now come down, and every listing says the same thing.</p></li></ol>
+  <p class="p">After that, Google gets minded for all of them: hours, events, photos and every review answered.</p>
+  <p class="lead">Every login stays yours. I do all of it, start to finish.</p>
+  <p class="p">Only a few things are yours to give, because only you know them: which hours are true, the bottomless days, the number to ring, and what the terms should say. You give me those once and I take it from there.</p>
+</section>
+
+<section class="doneover">
+  <h2 class="d">Grace Kelly’s, done over</h2>
+  <div class="ba" id="ba">
+    <div class="hw" aria-hidden="true"><span class="tag l">Before</span><span class="tag r">After</span><div class="line"><span class="knob"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div></div>
+    <div class="stage">
+      <div class="layer new"><img src="assets/gk-new-00.webp" width="780" height="2400" alt="" loading="lazy" decoding="async"><img src="assets/gk-new-01.webp" width="780" height="2400" alt="" loading="lazy" decoding="async"><img src="assets/gk-new-02.webp" width="780" height="2400" alt="" loading="lazy" decoding="async"><img src="assets/gk-new-03.webp" width="780" height="2400" alt="" loading="lazy" decoding="async"></div>
+      <div class="layer old"><img src="assets/gk-old-00.webp" width="780" height="2400" alt="" loading="lazy" decoding="async"><img src="assets/gk-old-01.webp" width="780" height="2400" alt="" loading="lazy" decoding="async"><img src="assets/gk-old-02.webp" width="780" height="2400" alt="" loading="lazy" decoding="async"><img src="assets/gk-old-03.webp" width="780" height="2400" alt="" loading="lazy" decoding="async"></div>
+    </div>
+  </div>
+  <p class="p">I built Grace Kelly’s Tynemouth the way I’d do it. It’s live and built for a phone: <a class="demo" href="https://gracekellys.paulmichaellove.com/" target="_blank" rel="noopener">gracekellys.paulmichaellove.com</a></p>
+  <p class="p">Everything on it traces to your own pages, your Instagram and Google. Three things stay marked until you’ve told me once which is true: the hours, the bottomless days and the phone number.</p>
+  <p class="p">The demo is live at its own address and touches nothing of yours: not your site, not your logins, not your Google listing.</p>
+</section>
+
+<section class="changed">
+  <h2 class="d">What’s changed and why</h2>
+  <p class="p">In the order a customer meets it on a phone.</p>
+  <ul class="cards"><li class="card"><img src="assets/changed-01.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="Open or not. “Are they open” is the first thing anyone asks."></li><li class="card"><img src="assets/changed-02.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="A phone number. Someone ready to come in can ring there and then."></li><li class="card"><img src="assets/changed-03.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="Book a table. He can ring with the booking ready in one tap, still on the page."></li><li class="card"><img src="assets/changed-04.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="The bottomless. A group needs the price and the day before anyone says yes."></li><li class="card"><img src="assets/changed-05.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="What’s on. Someone checking at teatime sees what’s on tonight."></li><li class="card"><img src="assets/changed-06.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="The room. People book a room they’ve already seen."></li><li class="card"><img src="assets/changed-07.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="Good to know. The small questions get answered before they become a reason to go elsewhere."></li><li class="card"><img src="assets/changed-08.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="One set of hours. Nobody turns up to a locked door."></li><li class="card"><img src="assets/changed-09.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="A shared link. A link sent round the group chat looks like the place."></li></ul>
+</section>
+
+<section class="percy">
+  <h2 class="d">The one before this</h2>
+  <p class="p">Percy Park rugby club got the same audit: a web address that opens on a picture, two live websites with the same article typed into both, and a hire page with no price and no form.</p>
+  <p class="p">Here’s another example of what I’m pushing out.</p>
+  <img class="shot" src="assets/percy-audit.jpg" width="909" height="1287" loading="lazy" decoding="async" alt="The findings page of the Percy Park audit">
+  <p class="p">Their front page was one flat picture, with no text a phone or Google can read. This is it now.</p>
+  <img class="shot" src="assets/percy-before-after.jpg" width="1700" height="1860" loading="lazy" decoding="async" alt="Percy Park’s first screen on a phone, before and after">
+</section>
+
+<section class="paper">
+  <h2 class="d">What this costs from an agency</h2>
+  <p class="p">I priced the same work if you hired an agency. These are published UK prices, read this month, and I can show you every source.</p>
+  <p class="p">Worked out from their listed prices, minding Google and answering the reviews for three venues comes to about <strong>£250 to £800 a month.</strong> A year of that is about <strong>£3,000 to £9,600.</strong></p>
+  <p class="p">One London agency publishes <strong>£500 to £2,000 a month</strong> to run Google for a whole group, depending on its size.</p>
+  <p class="p">The cheap end is a templated site with Google set up for about <strong>£49 a month</strong> plus a <strong>£99</strong> set-up, or a self-serve site tool at <strong>£19 to £69 a month.</strong> Fair prices for what they are. Neither answers a review in your voice, keeps one true set of hours across Google, your site and the rest, clears the backlog, or fixes what’s already broken on the sites you have.</p>
+
+  <h2 class="d from">What it costs from me</h2>
+  <p class="lead">For each site, the questions a customer asks get answered where he asks them, and stay answered.</p>
+  <p class="fig"><span class="amt">£697</span> a site to do it over, paid when it’s live.</p>
+  <p class="fig">Then <span class="amt">£97</span> a site a month.</p>
+  <p class="p">On the same sums as before, one lost bottomless table a week at the Cove and one at Grace Kelly’s come to £600 a month together, and all three minded is £291.</p>
+  <p class="p">The Cove’s do over is nine bottomless tables of two.</p>
+  <p class="lead">The do over, for each site:</p>
+  <ul class="list">
+    <li>the page built the way the Grace Kelly’s one is built</li>
+    <li>the page hosted and kept up by me; your web address stays yours, and if you stop the page files are yours</li>
+    <li>one true set of facts (hours, phone, menu, events, dogs, parking, access, deposits), pushed out to Google</li>
+    <li>the backlog of reviews answered in your voice</li>
+    <li>a picture on every shared link</li>
+    <li>the closed names put to bed</li>
+  </ul>
+  <p class="p">The £97 a month is Google minded: every new review answered in your voice, the hours and events kept true everywhere, closed names kept closed, and a note each month showing what I changed.</p>
+  <p class="p">The do over is different work from the build you’ve got: a page built from what people ask, the facts on Google and the backlog of reviews answered.</p>
+  <p class="risk">Nothing to pay until it’s live, and you can stop any month and keep every login, every page and every reply.</p>
+  <p class="p">I’m building this into something, and the first places in get it at these launch prices.</p>
+  <p class="p">I’m auditing a lot of places, so I expect those to go quickly.</p>
+</section>
+
+<section class="ask">
+  <h2 class="d">The ask</h2>
+  <p class="lead">If it’s in hand already, then no harm no foul. Was worth taking a look and you can use the findings anyway you wish.</p>
+  <p class="lead">Say the word and I take it from there. You send the logins once and I do the rest. Grace Kelly’s is live three days after the logins land, and nothing’s due till the day it is.</p>
+  <p class="p">This audit uses public pages, listings and socials only. Bookings and payments stay in your systems.</p>
+  <hr class="orule">
+  <p class="last">Nothing gets touched on any site, login or Google listing until you say so.</p>
+</section>
+
+</main>
+<script>
+(function () {
+  var rm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var io = "IntersectionObserver" in window;
+
+  // rings draw on as each frame enters view
+  var devs = document.querySelectorAll(".dev");
+  if (!io || rm) {
+    for (var i = 0; i < devs.length; i++) devs[i].classList.add("in");
+  } else {
+    var o = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("in"); o.unobserve(e.target); }
+      });
+    }, { threshold: 0.5 });
+    for (var j = 0; j < devs.length; j++) o.observe(devs[j]);
+  }
+
+  // the live demo, scaled into its phone
+  var fr = document.querySelector("iframe.live");
+  if (fr) {
+    var fit = function () { fr.style.transform = "scale(" + fr.parentNode.clientWidth / 390 + ")"; };
+    fit();
+    addEventListener("resize", fit);
+    fr.addEventListener("load", function () { fr.classList.add("ready"); });
+  }
+
+  // the one number counts up
+  var c = document.getElementById("count");
+  if (c && io && !rm) {
+    c.textContent = "£0";
+    var oc = new IntersectionObserver(function (es) {
+      if (!es[0].isIntersecting) return;
+      oc.disconnect();
+      var t0 = performance.now(), to = 1040, dur = 1700;
+      (function f(now) {
+        var p = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - p, 4);
+        c.textContent = "£" + Math.round(to * e).toLocaleString("en-GB");
+        if (p < 1) requestAnimationFrame(f);
+      })(t0);
+    }, { threshold: 0.9 });
+    oc.observe(c);
+  }
+
+  // before / after: drag the handle, touch or pointer; vertical swipes still scroll the page
+  var ba = document.getElementById("ba");
+  if (ba) {
+    var setx = function (p) { ba.style.setProperty("--x", Math.max(2, Math.min(98, p)) + "%"); };
+    var mv = function (e) { var r = ba.getBoundingClientRect(); setx((e.clientX - r.left) / r.width * 100); };
+    var sx = 0, sy = 0, drag = false, pid = null, moved = false;
+    ba.addEventListener("pointerdown", function (e) {
+      sx = e.clientX; sy = e.clientY; pid = e.pointerId; moved = false; drag = e.pointerType === "mouse";
+      if (drag) { try { ba.setPointerCapture(pid); } catch (x) {} mv(e); }
+    });
+    ba.addEventListener("pointermove", function (e) {
+      if (pid === null) return;
+      var dx = Math.abs(e.clientX - sx), dy = Math.abs(e.clientY - sy);
+      if (dx > 6 || dy > 6) moved = true;
+      if (!drag && dx > 8 && dx > dy) { drag = true; try { ba.setPointerCapture(pid); } catch (x) {} }
+      if (drag) mv(e);
+    });
+    var end = function (e) { if (pid !== null && !moved && !drag) mv(e); pid = null; drag = false; };
+    ba.addEventListener("pointerup", end);
+    ba.addEventListener("pointercancel", function () { pid = null; drag = false; });
+    // one sweep when it first comes into view, so the handle announces itself
+    if (io && !rm) {
+      var os = new IntersectionObserver(function (es) {
+        if (!es[0].isIntersecting) return;
+        os.disconnect();
+        var t0 = performance.now();
+        (function f(now) {
+          var p = Math.min(1, (now - t0) / 1300), e = 1 - Math.pow(1 - p, 3);
+          setx(88 - 38 * e);
+          if (p < 1) requestAnimationFrame(f);
+        })(t0);
+      }, { threshold: 0.12 });
+      os.observe(ba);
+    }
+  }
+})();
+
+</script>
+</body>
+</html>
