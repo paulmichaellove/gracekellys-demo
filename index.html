@@ -426,9 +426,9 @@ section { position: relative; }
 .hours th { color: var(--on-dark-2); }
 .hours tr.is-today th, .hours tr.is-today td { color: var(--gold-hi); font-weight: 600; }
 .hours tr.is-today th::after { content: " (today)"; font-weight: 400; }
-.ig { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; font-weight: 600; text-decoration: none; color: var(--cream); }
-.ig .ico { color: var(--gold); width: 22px; height: 22px; }
-.ig span { text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgba(197, 160, 89, .7); }
+.foot .soc { display: flex; gap: 6px; }
+.foot .soc a { justify-content: flex-start; min-width: 44px; color: #9b9486; }
+.foot .soc .ico { width: 26px; height: 26px; }
 
 /* ---------- FOOTER ---------- */
 .foot { background: var(--ink); padding: 52px 0 calc(110px + env(safe-area-inset-bottom)); color: var(--on-dark-2); font-size: .95rem; }
@@ -765,7 +765,6 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
         <button type="button" aria-label="Review 2"></button>
         <button type="button" aria-label="Review 3"></button>
       </div>
-      <a class="rv-all" href="https://www.google.com/maps/search/Grace+Kelly%27s+Tynemouth" rel="noopener" target="_blank">Read all on Google</a>
     </div>
   </div>
 </section>
@@ -793,7 +792,6 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
         <a class="btn btn--gold" href="https://www.google.com/maps/search/?api=1&amp;query=Grace+Kelly%27s+77+Front+Street+Tynemouth+NE30+4BP" rel="noopener" target="_blank"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Directions</a>
         <a class="btn btn--ghost" href="tel:+441914296576"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call us</a>
       </div>
-      <a class="ig" href="https://www.instagram.com/gracekellys_tynemouth/" rel="noopener" target="_blank"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg><span>@gracekellys_tynemouth</span></a>
     </div>
     <table class="hours" id="hours">
       <caption>Opening hours</caption>
@@ -822,7 +820,7 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
       <dt>Fri and Sat</dt><dd>11am to 2am</dd>
       <dt>Sun</dt><dd>12pm to midnight</dd>
     </dl>
-    <div><a href="https://www.instagram.com/gracekellys_tynemouth/" rel="noopener" target="_blank">Instagram @gracekellys_tynemouth</a></div>
+    <div class="soc"><a href="https://www.instagram.com/gracekellys_tynemouth/" rel="noopener" target="_blank" aria-label="Instagram"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg></a></div>
     <p class="legal">&copy; 2026 Grace Kelly&rsquo;s Irish Lounge</p>
   </div>
 </footer>
