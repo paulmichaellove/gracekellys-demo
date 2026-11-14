@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Grace Kelly&rsquo;s Irish Lounge, Tynemouth | Live music, sport and bottomless brunch</title>
-<meta name="description" content="Irish bar at 77 Front Street, Tynemouth. Live music Friday to Sunday, Sky Sports and TNT every day, bottomless brunch at &pound;35 a head. Call 0191 429 6576 or open the booking sheet.">
+<meta name="description" content="Grace Kelly’s Irish Lounge at 77 Front Street, Tynemouth. Live music, sport and an easy way to ask the venue about the Bottomless poster on its page.">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#0d2119">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/crown-64.png">
@@ -13,13 +13,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Grace Kelly&rsquo;s Irish Lounge">
 <meta property="og:title" content="Grace Kelly&rsquo;s Irish Lounge, Tynemouth">
-<meta property="og:description" content="77 Front Street, Tynemouth. Live music Friday to Sunday, sport every day, bottomless brunch at &pound;35. Call or book in a tap.">
-<meta property="og:url" content="https://gracekellys.paulmichaellove.com/">
-<meta property="og:image" content="https://gracekellys.paulmichaellove.com/assets/share-card-1200x630.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="The back bar at Grace Kelly&rsquo;s with the gold crown logo and the address, 77 Front Street, Tynemouth">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:description" content="77 Front Street, Tynemouth. Live music, sport and a direct way to ask the venue about the Bottomless poster on its page.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,10 +28,9 @@
       "@id": "#venue",
       "name": "Grace Kelly's Irish Lounge",
       "alternateName": "Grace Kelly's Tynemouth",
-      "description": "Irish bar on Front Street, Tynemouth, with live music Friday to Sunday, Sky Sports and TNT every day, and a bottomless brunch.",
+      "description": "Irish lounge at 77 Front Street, Tynemouth.",
       "image": ["assets/share-card-1200x630.jpg", "assets/hero-harp-1080.webp"],
       "logo": "assets/logo-gold-960.png",
-      "telephone": "+44 191 429 6576",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "77 Front Street",
@@ -46,40 +39,7 @@
         "addressCountry": "GB"
       },
       "hasMap": "https://www.google.com/maps/search/?api=1&query=Grace+Kelly%27s+77+Front+Street+Tynemouth+NE30+4BP",
-      "openingHoursSpecification": [
-        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "11:00", "closes": "00:00"},
-        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "11:00", "closes": "02:00"},
-        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "00:00"}
-      ],
-      "sameAs": ["https://www.instagram.com/gracekellys_tynemouth/"],
-      "makesOffer": {
-        "@type": "Offer",
-        "name": "Bottomless brunch, 90 minutes",
-        "price": "35",
-        "priceCurrency": "GBP"
-      },
-      "event": {"@id": "#soul-afternoon"}
-    },
-    {
-      "@type": "Event",
-      "@id": "#soul-afternoon",
-      "name": "Soul Afternoon",
-      "startDate": "2026-11-08T14:00:00+00:00",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "image": ["assets/gig-1080.webp"],
-      "location": {
-        "@type": "Place",
-        "name": "Grace Kelly's Irish Lounge",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "77 Front Street",
-          "addressLocality": "Tynemouth, North Shields",
-          "postalCode": "NE30 4BP",
-          "addressCountry": "GB"
-        }
-      },
-      "organizer": {"@id": "#venue"}
+      "sameAs": ["https://www.instagram.com/gracekellys_tynemouth/"]
     }
   ]
 }
@@ -604,17 +564,17 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
       <a href="#drinks">Drinks</a>
       <a href="#whats-on">What&rsquo;s on</a>
       <a href="#find-us">Find us</a>
-      <button class="btn btn--gold" type="button" data-book="table">Book a table</button>
+      <button class="btn btn--gold" type="button" data-book="bottomless">Ask about Bottomless</button>
     </nav>
   </div>
   <div aria-hidden="true"></div>
   <div class="hero__body">
-    <p class="status" id="status" role="status"><span class="dot" aria-hidden="true"></span><span id="status-text">Open seven days</span></p>
+    <p class="status" id="status"><span class="dot" aria-hidden="true"></span><span id="status-text">Check the latest hours before travelling</span></p>
     <h1>Tynemouth&rsquo;s home of <em>Irish hospitality</em></h1>
     <p class="hero__addr"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>77 Front Street, Tynemouth</p>
     <div class="hero__cta">
-      <button class="btn btn--gold" type="button" data-book="table">Book a table</button>
-      <a class="btn btn--ghost" href="tel:+441914296576"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+      <button class="btn btn--gold" type="button" data-book="bottomless">Ask about Bottomless</button>
+      <a class="btn btn--ghost" href="https://www.instagram.com/gracekellys_tynemouth/" target="_blank" rel="noopener">Message on Instagram</a>
     </div>
   </div>
 </header>
@@ -625,19 +585,19 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
   <div class="wrap">
     <div class="copy-col">
       <h2 class="h2" id="bl-h">The big Irish <em>bottomless</em></h2>
-      <div class="price" aria-label="35 pounds a head">
+      <div class="price" aria-label="35 pounds a head, as shown on the poster">
         <span class="price__num" aria-hidden="true">&pound;35</span>
         <span class="price__unit" aria-hidden="true">a head</span>
       </div>
-      <p class="lead">90 minutes of bottomless drinks &amp; choice of loaded fries &amp; a small plate.</p>
+      <p class="lead">A Bottomless poster appears on the official Tynemouth page. Ask the venue to confirm availability and terms before planning around it.</p>
       <dl class="slots">
         <div><dt>Thursday and Friday</dt><dd>4pm to 7pm</dd></div>
         <div><dt>Saturday and Sunday</dt><dd>12pm to 4pm</dd></div>
       </dl>
-      <p class="confirm confirm--on-gold">to confirm with you: the bottomless days and times</p>
+      <p class="confirm confirm--on-gold">Poster shown on the official page: £35; Thu–Fri 4–7pm; Sat–Sun 12–4pm. Confirm Tynemouth availability and terms.</p>
       <div class="bl-cta">
-        <button class="btn btn--ink" type="button" data-book="bottomless"><svg class="ico" aria-hidden="true"><use href="#i-glass"/></svg>Book bottomless</button>
-        <a class="textlink" href="tel:+441914296576">or ring 0191 429 6576</a>
+        <button class="btn btn--ink" type="button" data-book="bottomless"><svg class="ico" aria-hidden="true"><use href="#i-glass"/></svg>Ask about Bottomless</button>
+        <a class="textlink" href="https://www.instagram.com/gracekellys_tynemouth/" target="_blank" rel="noopener">Message the Tynemouth team on Instagram</a>
       </div>
     </div>
     <figure class="polaroid">
@@ -670,19 +630,18 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
   <div class="wrap">
     <div class="tl">
       <h2 class="h2" id="to-h">Tonight and <em>this weekend</em></h2>
-      <p class="tonight-line" id="tonight-line">Live music on <strong>Friday, Saturday and Sunday</strong>. Sky Sports and TNT on the screens every day.</p>
+    <p class="tonight-line" id="tonight-line">Live music Friday to Sunday. Sky Sports and TNT on the screens.</p>
       <ul class="week" aria-label="What is on each day">
-        <li data-day="1"><span class="d">Mon</span><svg class="ico" role="img" aria-label="Sport"><use href="#i-tv"/></svg><svg class="ico off" aria-hidden="true"><use href="#i-glass"/></svg><svg class="ico off" aria-hidden="true"><use href="#i-music"/></svg></li>
-        <li data-day="2"><span class="d">Tue</span><svg class="ico" role="img" aria-label="Sport"><use href="#i-tv"/></svg><svg class="ico off" aria-hidden="true"><use href="#i-glass"/></svg><svg class="ico off" aria-hidden="true"><use href="#i-music"/></svg></li>
-        <li data-day="3"><span class="d">Wed</span><svg class="ico" role="img" aria-label="Sport"><use href="#i-tv"/></svg><svg class="ico off" aria-hidden="true"><use href="#i-glass"/></svg><svg class="ico off" aria-hidden="true"><use href="#i-music"/></svg></li>
-        <li data-day="4"><span class="d">Thu</span><svg class="ico" role="img" aria-label="Sport"><use href="#i-tv"/></svg><svg class="ico" role="img" aria-label="Bottomless brunch"><use href="#i-glass"/></svg><svg class="ico off" aria-hidden="true"><use href="#i-music"/></svg></li>
-        <li data-day="5"><span class="d">Fri</span><svg class="ico" role="img" aria-label="Sport"><use href="#i-tv"/></svg><svg class="ico" role="img" aria-label="Bottomless brunch"><use href="#i-glass"/></svg><svg class="ico music" role="img" aria-label="Live music"><use href="#i-music"/></svg></li>
-        <li data-day="6"><span class="d">Sat</span><svg class="ico" role="img" aria-label="Sport"><use href="#i-tv"/></svg><svg class="ico" role="img" aria-label="Bottomless brunch"><use href="#i-glass"/></svg><svg class="ico music" role="img" aria-label="Live music"><use href="#i-music"/></svg></li>
-        <li data-day="0"><span class="d">Sun</span><svg class="ico" role="img" aria-label="Sport"><use href="#i-tv"/></svg><svg class="ico" role="img" aria-label="Bottomless brunch"><use href="#i-glass"/></svg><svg class="ico music" role="img" aria-label="Live music"><use href="#i-music"/></svg></li>
+      <li><span class="d">Mon</span><svg class="ico" role="img" aria-label="Sport"><use href="#i-tv"/></svg><svg class="ico off" aria-hidden="true"><use href="#i-music"/></svg></li>
+      <li><span class="d">Tue</span><svg class="ico" role="img" aria-label="Sport"><use href="#i-tv"/></svg><svg class="ico off" aria-hidden="true"><use href="#i-music"/></svg></li>
+      <li><span class="d">Wed</span><svg class="ico" role="img" aria-label="Sport"><use href="#i-tv"/></svg><svg class="ico off" aria-hidden="true"><use href="#i-music"/></svg></li>
+      <li><span class="d">Thu</span><svg class="ico" role="img" aria-label="Sport"><use href="#i-tv"/></svg><svg class="ico off" aria-hidden="true"><use href="#i-music"/></svg></li>
+      <li><span class="d">Fri</span><svg class="ico" role="img" aria-label="Sport"><use href="#i-tv"/></svg><svg class="ico music" role="img" aria-label="Live music"><use href="#i-music"/></svg></li>
+      <li><span class="d">Sat</span><svg class="ico" role="img" aria-label="Sport"><use href="#i-tv"/></svg><svg class="ico music" role="img" aria-label="Live music"><use href="#i-music"/></svg></li>
+      <li><span class="d">Sun</span><svg class="ico" role="img" aria-label="Sport"><use href="#i-tv"/></svg><svg class="ico music" role="img" aria-label="Live music"><use href="#i-music"/></svg></li>
       </ul>
       <ul class="legend" aria-hidden="true">
         <li><svg class="ico"><use href="#i-tv"/></svg>Sky Sports and TNT</li>
-        <li><svg class="ico"><use href="#i-glass"/></svg>Bottomless</li>
         <li class="music"><svg class="ico"><use href="#i-music"/></svg>Live music</li>
       </ul>
     </div>
@@ -690,14 +649,6 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
       <img src="assets/gig-720.webp" srcset="assets/gig-720.webp 720w, assets/gig-1080.webp 1080w" sizes="(min-width: 1000px) 46vw, 100vw" width="720" height="900" loading="lazy" alt="A guitarist singing on the stage under the Good Craic screen and the Grace Kelly&rsquo;s crown sign">
       <figcaption><b>Live music, every weekend</b><span>Local artists and acoustic sessions, the best Irish favourites to start your weekend right.</span></figcaption>
     </figure>
-    <article class="ticket" id="soul" aria-labelledby="soul-h" data-date="2026-11-08">
-      <div class="ticket__stub" aria-hidden="true"><span class="wd">Sun</span><span class="dn">8</span><span class="mo">Nov</span></div>
-      <div class="ticket__body">
-        <h3 id="soul-h">Soul Afternoon</h3>
-        <p><time datetime="2026-11-08T14:00">Sunday 8 November, 2pm</time></p>
-        <button class="btn btn--green" type="button" data-book="table" data-date="2026-11-08" data-time="14:00">Book a table for it</button>
-      </div>
-    </article>
   </div>
 </section>
 
@@ -705,11 +656,9 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
   <div class="wrap">
     <h2 class="h2" id="su-h">Sun<em>days</em></h2>
     <ol class="timeline">
-      <li><span class="t">12pm</span><span class="w"><b>Doors open, bottomless starts</b><span>&pound;35 a head for 90 minutes, until 4pm</span></span></li>
-      <li><span class="t">2pm</span><span class="w"><b>Soul Afternoon</b><span>Sunday 8 November</span></span></li>
-      <li><span class="t">Midnight</span><span class="w"><b>Closing time</b><span>Twelve hours of it</span></span></li>
+      <li><span class="t">Before you go</span><span class="w"><b>Check the venue’s latest details</b><span>Ask Tynemouth to confirm current hours, music times and Bottomless availability.</span></span></li>
     </ol>
-    <p class="after">Live music on Sundays too, with Sky Sports and TNT on the screens.</p>
+      <p class="after">Planning a visit? Ask the Tynemouth team to confirm current hours, music times and offers.</p>
   </div>
 </section>
 
@@ -733,7 +682,7 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
         <h3>Celebrate with us</h3>
       </div>
       <p class="occasions">Birthdays and milestones, engagement parties, work socials, group gatherings</p>
-      <p>Tell us the date and how many are coming, by phone.</p>
+      <p>Tell us the date and how many are coming. We’ll confirm availability directly.</p>
       <button class="btn btn--gold" type="button" data-book="party">Plan a party</button>
     </div>
   </div>
@@ -773,12 +722,12 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
   <div class="wrap">
     <h2 class="h2" id="kn-h">Good to know</h2>
     <dl class="facts">
-      <div><dt>Open seven days</dt><dd>From 11am, and from 12pm on Sundays. Late on Friday and Saturday.</dd></div>
+      <div><dt>Opening hours</dt><dd>Currently published on the Tynemouth page. Check the latest details before travelling.</dd></div>
       <div><dt>Sport</dt><dd>Sky Sports and TNT on the screens every day.</dd></div>
       <div><dt>Live music</dt><dd>Friday, Saturday and Sunday.</dd></div>
-      <div><dt>Bottomless brunch</dt><dd>&pound;35 a head for 90 minutes of bottomless drinks, Thursday to Sunday.</dd></div>
-      <div><dt>Groups and parties</dt><dd>Birthdays, engagements and work socials. Call to plan one.</dd></div>
-      <div><dt>Booking</dt><dd><a href="tel:+441914296576">Call 0191 429 6576</a> <span class="confirm">to confirm with you: phone number</span></dd></div>
+      <div><dt>Bottomless</dt><dd>A poster appears on the Tynemouth page. Ask the venue to confirm availability and terms.</dd></div>
+      <div><dt>Groups and parties</dt><dd>Ask the venue about birthdays, engagements and work socials.</dd></div>
+      <div><dt>Contact</dt><dd><a href="https://www.instagram.com/gracekellys_tynemouth/" target="_blank" rel="noopener">Message Grace Kelly’s Tynemouth on Instagram</a></dd></div>
     </dl>
   </div>
 </section>
@@ -790,22 +739,17 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
       <address class="addr">77 Front Street<span>Tynemouth</span><small>North Shields NE30 4BP</small></address>
       <div class="find-cta">
         <a class="btn btn--gold" href="https://www.google.com/maps/search/?api=1&amp;query=Grace+Kelly%27s+77+Front+Street+Tynemouth+NE30+4BP" rel="noopener" target="_blank"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Directions</a>
-        <a class="btn btn--ghost" href="tel:+441914296576"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call us</a>
+        <a class="btn btn--ghost" href="https://www.instagram.com/gracekellys_tynemouth/" target="_blank" rel="noopener">Message on Instagram</a>
       </div>
     </div>
     <table class="hours" id="hours">
       <caption>Opening hours</caption>
       <tbody>
-        <tr data-day="1"><th scope="row">Monday</th><td>11am to midnight</td></tr>
-        <tr data-day="2"><th scope="row">Tuesday</th><td>11am to midnight</td></tr>
-        <tr data-day="3"><th scope="row">Wednesday</th><td>11am to midnight</td></tr>
-        <tr data-day="4"><th scope="row">Thursday</th><td>11am to midnight</td></tr>
-        <tr data-day="5"><th scope="row">Friday</th><td>11am to 2am</td></tr>
-        <tr data-day="6"><th scope="row">Saturday</th><td>11am to 2am</td></tr>
-        <tr data-day="0"><th scope="row">Sunday</th><td>12pm to midnight</td></tr>
+        <tr><th scope="row">Monday to Thursday</th><td>12pm to 11pm</td></tr>
+        <tr><th scope="row">Friday to Sunday</th><td>12pm to 1am</td></tr>
       </tbody>
     </table>
-    <p class="confirm confirm--hours">to confirm with you: the opening hours</p>
+    <p class="confirm confirm--hours">Hours currently shown on the official Tynemouth page. Confirm before launch.</p>
   </div>
 </section>
 
@@ -814,33 +758,27 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
 <footer class="foot">
   <div class="wrap">
     <img src="assets/logo-gold-480.webp" width="480" height="281" loading="lazy" alt="Grace Kelly&rsquo;s Irish Lounge">
-    <address>Grace Kelly&rsquo;s Irish Lounge<br>77 Front Street, Tynemouth<br>North Shields NE30 4BP<br><a href="tel:+441914296576">0191 429 6576</a></address>
-    <dl>
-      <dt>Mon to Thu</dt><dd>11am to midnight</dd>
-      <dt>Fri and Sat</dt><dd>11am to 2am</dd>
-      <dt>Sun</dt><dd>12pm to midnight</dd>
-    </dl>
+    <address>Grace Kelly&rsquo;s Irish Lounge<br>77 Front Street, Tynemouth<br>North Shields NE30 4BP</address>
     <div class="soc"><a href="https://www.instagram.com/gracekellys_tynemouth/" rel="noopener" target="_blank" aria-label="Instagram"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg></a></div>
     <p class="legal">&copy; 2026 Grace Kelly&rsquo;s Irish Lounge</p>
   </div>
 </footer>
 
 <div class="dock" id="dock" aria-hidden="true">
-  <button class="btn btn--gold" type="button" data-book="table" tabindex="-1">Book a table</button>
-  <a class="btn btn--ghost" href="tel:+441914296576" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+  <button class="btn btn--gold" type="button" data-book="bottomless" tabindex="-1">Ask about Bottomless</button>
+  <a class="btn btn--ghost" href="https://www.instagram.com/gracekellys_tynemouth/" target="_blank" rel="noopener" tabindex="-1">Instagram</a>
 </div>
 
 <dialog class="sheet" id="book" aria-labelledby="book-h">
   <form class="sheet__in" method="dialog" id="book-form">
     <div class="sheet__grab" aria-hidden="true"></div>
     <div class="sheet__head">
-      <h2 id="book-h">Book with us</h2>
+      <h2 id="book-h">Ask about Bottomless</h2>
       <button class="x" type="button" id="book-close" aria-label="Close"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></button>
     </div>
     <fieldset class="seg">
       <legend>What for</legend>
-      <label><input type="radio" name="kind" value="table" checked><span>A table</span></label>
-      <label><input type="radio" name="kind" value="bottomless"><span>Bottomless</span></label>
+      <label><input type="radio" name="kind" value="bottomless" checked><span>Bottomless</span></label>
       <label><input type="radio" name="kind" value="party"><span>A party</span></label>
     </fieldset>
     <div class="field">
@@ -855,12 +793,11 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
       <div class="field"><label for="date">Date</label><input type="date" id="date" name="date"></div>
       <div class="field"><label for="time">Time</label><input type="time" id="time" name="time" step="900"></div>
     </div>
-    <p class="hint" id="kind-hint">Bottomless runs Thursday and Friday 4pm to 7pm, Saturday and Sunday 12pm to 4pm.</p>
+    <p class="hint" id="kind-hint">Ask the venue to confirm availability, price and terms.</p>
     <div class="field"><label for="name">Your name</label><input type="text" id="name" name="name" autocomplete="name" placeholder="So we know who to expect"></div>
-    <div class="summary" aria-live="polite"><b>Your message</b><span id="summary">Hi Grace Kelly&rsquo;s, I&rsquo;d like to book a table for 2.</span></div>
+    <div class="summary" aria-live="polite"><b>Your message</b><span id="summary">Hi Grace Kelly&rsquo;s, I&rsquo;d like to ask about Bottomless for 2.</span></div>
     <div class="sheet__go">
-      <a class="btn btn--green" id="go-call" href="tel:+441914296576"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
-      <!-- Message returns when the venue gives a mobile or WhatsApp number. -->
+      <a class="btn btn--green" id="go-call" href="https://www.instagram.com/gracekellys_tynemouth/" target="_blank" rel="noopener">Open Tynemouth Instagram</a>
     </div>
     <button class="copy" type="button" id="go-copy">Copy the message</button>
   </form>
@@ -883,10 +820,6 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
       if (el.getAttribute("data-date") < today) el.style.display = "none";
     });
   })();
-  /* Google's listed hours. Day 0 is Sunday. Close past 24 means after midnight. */
-  var HOURS = { 0: [12, 24], 1: [11, 24], 2: [11, 24], 3: [11, 24], 4: [11, 24], 5: [11, 26], 6: [11, 26] };
-  var DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
   function london() {
     try {
       var parts = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(new Date());
@@ -899,53 +832,9 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
       return { day: d.getDay(), mins: d.getHours() * 60 + d.getMinutes(), iso: d.toISOString().slice(0, 10) };
     }
   }
-  function hourLabel(h) {
-    h = h % 24;
-    if (h === 0) return "midnight";
-    if (h === 12) return "12pm";
-    return h < 12 ? h + "am" : (h - 12) + "pm";
-  }
-  function status(now) {
-    var y = (now.day + 6) % 7, ty = HOURS[y], t = HOURS[now.day];
-    if (ty[1] > 24 && now.mins < (ty[1] - 24) * 60) return { open: true, text: "Open now, until " + hourLabel(ty[1]) };
-    if (now.mins >= t[0] * 60 && now.mins < t[1] * 60) return { open: true, text: "Open now, until " + hourLabel(t[1]) };
-    if (now.mins < t[0] * 60) return { open: false, text: "Opens today at " + hourLabel(t[0]) };
-    return { open: false, text: "Opens tomorrow at " + hourLabel(HOURS[(now.day + 1) % 7][0]) };
-  }
-
   var now = london();
-  var st = status(now);
-  var stEl = document.getElementById("status");
-  document.getElementById("status-text").textContent = st.text;
-  if (!st.open) stEl.classList.add("is-closed");
 
-  /* The trading day: after midnight on a late night, it is still the night before */
-  var tradingDay = now.day;
-  var yHours = HOURS[(now.day + 6) % 7];
-  if (yHours[1] > 24 && now.mins < (yHours[1] - 24) * 60) tradingDay = (now.day + 6) % 7;
-
-  document.querySelectorAll('[data-day="' + tradingDay + '"]').forEach(function (el) { el.classList.add("is-today"); });
-
-  var music = tradingDay === 5 || tradingDay === 6 || tradingDay === 0;
-  var bottomless = tradingDay >= 4 || tradingDay === 0;
-  var line = document.getElementById("tonight-line");
-  var name = DAYS[tradingDay];
-  if (music) {
-    line.innerHTML = "It&rsquo;s " + name + ": <strong>live music tonight</strong>, " + (bottomless ? "bottomless earlier on, " : "") + "and Sky Sports and TNT on the screens.";
-  } else if (tradingDay === 4) {
-    line.innerHTML = "It&rsquo;s Thursday: <strong>bottomless from 4pm to 7pm</strong>, sport on the screens, and live music from tomorrow.";
-  } else {
-    line.innerHTML = "It&rsquo;s " + name + ": <strong>Sky Sports and TNT</strong> on the screens tonight. Bottomless starts Thursday, live music on Friday.";
-  }
-
-  /* The dated event drops off once its day has passed */
-  if (now.iso > "2026-11-08") {
-    var soul = document.getElementById("soul");
-    if (soul) soul.remove();
-    document.querySelectorAll(".timeline li").forEach(function (li) { if (/Soul Afternoon/.test(li.textContent)) li.remove(); });
-  }
-
-  /* Sticky Book and Call bar once the first screen has scrolled away */
+  /* Sticky Bottomless enquiry and Instagram link once the first screen has scrolled away */
   var dock = document.getElementById("dock");
   var hero = document.getElementById("top");
   if ("IntersectionObserver" in window) {
@@ -969,7 +858,7 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
   var size = 2;
   dateIn.min = now.iso;
 
-  function kind() { var k = form.querySelector('input[name="kind"]:checked'); return k ? k.value : "table"; }
+  function kind() { var k = form.querySelector('input[name="kind"]:checked'); return k ? k.value : "bottomless"; }
   function niceDate(v) {
     if (!v) return "";
     var p = v.split("-");
@@ -986,20 +875,17 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
 
   function build() {
     var k = kind();
-    var what = k === "bottomless" ? "bottomless brunch" : k === "party" ? "a party" : "a table";
-    var msg = "Hi Grace Kelly’s, " + (k === "party" ? "I’d like to plan a party for " : "I’d like to book " + what + " for ") + size;
+    var msg = "Hi Grace Kelly’s, " + (k === "party" ? "I’d like to ask about a party for " : "I’d like to ask about Bottomless for ") + size;
     if (dateIn.value) msg += " on " + niceDate(dateIn.value);
     if (timeIn.value) msg += " at " + niceTime(timeIn.value);
     msg += ".";
     if (nameIn.value.trim()) msg += " My name is " + nameIn.value.trim() + ".";
     summary.textContent = msg;
 
-    var wd = weekday(dateIn.value);
     hint.className = "hint";
     if (k === "bottomless") {
       hint.hidden = false;
-      if (wd >= 1 && wd <= 3) { hint.textContent = "Bottomless runs Thursday to Sunday. Pick one of those days."; hint.className = "hint warn"; }
-      else hint.textContent = "Bottomless runs Thursday and Friday 4pm to 7pm, Saturday and Sunday 12pm to 4pm.";
+      hint.textContent = "The page displays a Bottomless poster. Ask Tynemouth to confirm availability, price and terms.";
     } else if (k === "party") {
       hint.hidden = false;
       hint.textContent = "Birthdays, engagements, work socials, group gatherings. Give us a rough number and we can talk it through.";
@@ -1010,26 +896,12 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
   }
 
   function openBook(btn) {
-    var k = btn.getAttribute("data-book") || "table";
+    var k = btn.getAttribute("data-book") || "bottomless";
     var r = form.querySelector('input[name="kind"][value="' + k + '"]');
     if (r) r.checked = true;
     dateIn.value = btn.getAttribute("data-date") || dateIn.value || now.iso;
-    if (k === "bottomless" && !btn.getAttribute("data-date")) {
-      /* bottomless runs Thursday to Sunday: jump a Monday to Wednesday date to the next Thursday */
-      var w0 = weekday(dateIn.value);
-      if (w0 >= 1 && w0 <= 3) {
-        var p0 = dateIn.value.split("-"), d0 = new Date(+p0[0], +p0[1] - 1, +p0[2] + (4 - w0));
-        dateIn.value = d0.getFullYear() + "-" + String(d0.getMonth() + 1).padStart(2, "0") + "-" + String(d0.getDate()).padStart(2, "0");
-        timeIn.value = "";
-      }
-    }
     var t = btn.getAttribute("data-time");
     if (t) timeIn.value = t;
-    if (k === "bottomless" && !timeIn.value) {
-      var wd = weekday(dateIn.value);
-      if (wd === 4 || wd === 5) timeIn.value = "16:00";
-      if (wd === 6 || wd === 0) timeIn.value = "12:00";
-    }
     if (k === "party" && size < 8) { size = 10; sizeOut.textContent = size; }
     build();
     if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", "");
@@ -1044,11 +916,6 @@ dialog.sheet::backdrop { background: rgba(8, 20, 15, .72); }
   document.getElementById("size-up").addEventListener("click", function () { size = Math.min(60, size + 1); sizeOut.textContent = size; build(); });
   form.addEventListener("input", build);
   form.addEventListener("change", function (e) {
-    if (e.target.name === "kind" && e.target.value === "bottomless" && !timeIn.value) {
-      var wd = weekday(dateIn.value);
-      if (wd === 4 || wd === 5) timeIn.value = "16:00";
-      if (wd === 6 || wd === 0) timeIn.value = "12:00";
-    }
     build();
   });
 
